@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ./.claude/hook/store-session.js"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(open:*)",
+      "Read(/Users/VINAYKUM/sessions/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
